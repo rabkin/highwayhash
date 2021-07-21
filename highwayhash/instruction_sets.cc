@@ -15,8 +15,8 @@
 #include "highwayhash/instruction_sets.h"
 #include "highwayhash/arch_specific.h"
 
-// Currently there are only specialized targets for X64; other architectures
-// only use HH_TARGET_Portable, in which case Supported() just returns that.
+// Currently we only needed runtime dispatching for x86/x64; other architectures
+// support a fixed set of targets, in which case Supported() just returns that.
 #if HH_ARCH_X64
 
 #include <atomic>
